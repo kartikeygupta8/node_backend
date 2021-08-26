@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "eb83d403-626e-497c-89ff-087824fd6dcf",
+		"name": "nodeProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Rajeev\",\r\n    \"lastName\" : \"Gupta\",\r\n    \"email\" : \"kkgupta@email.com\",\r\n    \"password\" : \"tech1234\",\r\n    \"contactNumber\" :  \"8756440323\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kkgupta@email.com\",\r\n    \"password\":\"tech1234\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resetPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kkgupta@email.com\",\r\n    \"contactNumber\":\"8756440323\",\r\n    \"newPassword\":\"tech1234\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/forgetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"forgetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"kgupta@email.com\",\r\n    \"productName\" : \"fridge\",\r\n    \"quantity\" : 1,\r\n    \"totalAmount\" : 50000,\r\n    \"isRecurring\" : false\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"air conditioner\",\r\n    \"productDescription\" : \"Everyday use\",\r\n    \"price\" : \"50000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/addProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgetPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kkgupta@email.com\",\r\n    \"contactNumber\":\"8756440323\",\r\n    \"newPassword\":\"tech1234\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/forgetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"forgetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserDetail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"kgupta@email.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/getUserDetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"getUserDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderMonth&YearWise",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"month\" : \"9\",\r\n    \"year\" : \"2021\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/getOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"getOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecurringOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"kgupta@email.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/getRecurringOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"getRecurringOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
